@@ -79,15 +79,57 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    Metapp
                 </div>
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                <div class="container">
+				
+					<div class="row">
+					
+						<div class="col-md-10 col-md-offset-1">
+						
+							<div class="panel panel-success">
+							
+								@if(Auth::check())
+								
+									<div class="panel-heading">Lista de usuarios</div>
+									
+										
+											
+											<!-- Table -->
+											
+											<table class="table">
+											
+												<tr>
+												
+													<th>Usuario</th>
+													
+													<th>Nombre</th>
+													
+												</tr>
+												
+												@foreach($characters as $key => $value)
+												
+													<tr>
+													
+														<td>{{ $key }}</td><td>{{ $value }}</td>
+														
+													</tr>
+													
+												@endforeach
+												
+											</table>
+											
+										
+									
+									</div>
+									
+								@endif
+								
+							</div>
+							
+						</div>
+
                 </div>
             </div>
         </div>
