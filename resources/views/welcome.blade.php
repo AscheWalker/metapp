@@ -102,9 +102,9 @@
 											
 												<tr>
 												
-													<th>Usuario</th>
-													
 													<th>Nombre</th>
+													
+													<th>email</th>
 													
 												</tr>
 												
@@ -112,7 +112,7 @@
 												
 													<tr>
 													
-														<td>{{ $key }}</td><td>{{ $value }}</td>
+														<td>{{ $value->name }}</td><td>{{ $value->email }}</td>
 														
 													</tr>
 													
