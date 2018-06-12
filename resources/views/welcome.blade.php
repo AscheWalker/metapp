@@ -91,12 +91,12 @@
 							<div class="panel panel-success">
 							
 								@if(Auth::check())
-								
+								<!--
 									<div class="panel-heading">Lista de usuarios</div>
 									
 										
 											
-											<!-- Table -->
+											<!-- Table 
 											
 											<table class="table">
 											
@@ -123,7 +123,7 @@
 										
 									
 									</div>
-									
+								-->	
 								@endif
 								
 							</div>
