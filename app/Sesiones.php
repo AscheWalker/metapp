@@ -8,5 +8,12 @@ class Sesiones extends Model
 {
     //
 	
+	protected $fillable = [
+		'curso',
+		'desc',
+		'inicio',
+		'final'
+	];
+	
 	protected $table = 'sesiones';
 }

@@ -9,8 +9,8 @@
 				
 				<div class="card-body">
 					<div class="btn-group-vertical btn-group-lg d-flex" role="group">
-						<a type="button" class="btn btn-secondary" href="sesiones/ver">Ver sesiones</a>
-						<button type="button" class="btn btn-secondary">Crear sesiones</button>
+						<a type="button" class="btn btn-secondary" href={{route('VerSesiones')}}>Ver sesiones</a>
+						<a type="button" class="btn btn-secondary" href={{route('CrearSesiones')}}>Crear sesiones</a>
 						<button type="button" class="btn btn-secondary">Editar sesiones</button>
 					</div>
 				</div>

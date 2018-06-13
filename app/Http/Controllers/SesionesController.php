@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Sesiones;
 use Illuminate\Http\Request;
 
+use App\Cursos;
+
 class SesionesController extends Controller
 {
     /**
@@ -25,6 +27,9 @@ class SesionesController extends Controller
     public function create()
     {
         //
+		
+		$characters = Cursos::all();
+		return view('sesionesCrear')->withCharacters($characters);
     }
 
     /**
@@ -36,6 +41,9 @@ class SesionesController extends Controller
     public function store(Request $request)
     {
         //
+		
+		$sesion = Sesiones::create($request->all());
+		return redirect()->route('Sesiones');
     }
 
     /**

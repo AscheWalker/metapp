@@ -24,6 +24,8 @@ Route::get('/actividades/nuevo', 'ActividadesController@store');
 
 Route::get('/sesiones', 'SesionesController@show')->name('Sesiones');
 Route::get('/sesiones/ver', 'SesionesController@show2')->name('VerSesiones');
+Route::get('/sesiones/crear', 'SesionesController@create')->name('CrearSesiones');
+Route::get('/sesiones/nuevo', 'SesionesController@store');
 
 Route::get('/cursos', 'CursosController@show')->name('Cursos');
 Route::get('/cursos/ver', 'CursosController@show2')->name('VerCursos');
