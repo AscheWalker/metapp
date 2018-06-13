@@ -8,5 +8,11 @@ class Cursos extends Model
 {
     //
 	
+	protected $fillable = [
+		'name',
+		'desc',
+		'ano'
+	];
+	
 	protected $table = 'cursos';
 }

@@ -25,6 +25,8 @@ class CursosController extends Controller
     public function create()
     {
         //
+		
+		return view('cursosCrear');
     }
 
     /**
@@ -36,6 +38,9 @@ class CursosController extends Controller
     public function store(Request $request)
     {
         //
+		
+		$curso = Cursos::create($request->all());
+		return redirect()->route('Cursos');
     }
 
     /**
