@@ -25,6 +25,8 @@ class ActividadesController extends Controller
     public function create()
     {
         //
+		
+		return view('ActividadesCrear');
     }
 
     /**
@@ -36,6 +38,9 @@ class ActividadesController extends Controller
     public function store(Request $request)
     {
         //
+		
+		$actividad = Actividades::create($request->all());
+		return redirect()->route('Actividades');
     }
 
     /**
