@@ -34,3 +34,4 @@ Route::get('/cursos/nuevo', 'CursosController@store');
 
 Route::get('/planeamiento/{id}', 'Planeamiento@show')->name('Planeamiento');
 Route::get('/planeamientocheck', 'Planeamiento@check')->name('CheckPlaneamiento');
+Route::get('/ejecucioncheck', 'Planeamiento@checkejecucion')->name('CheckEjecucion');

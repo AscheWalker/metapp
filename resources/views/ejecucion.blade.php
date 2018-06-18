@@ -25,10 +25,10 @@
 								@endforeach
 							</tbody>
 						</table>
-						<label for="respuesta">Selecione respuesta:</label>
-						<select class="form-control" id="respuesta">
+						<label>Selecione respuesta:</label>
+						<select class="form-control" id="respuesta" name="resp">
 							@foreach($characters as $key => $value)
-								<option>{{ $loop->iteration }}</option>
+								<option value={{ $value->id }}>{{ $loop->iteration }}</option>
 							@endforeach
 						</select>
 						<button type="submit" class="btn btn-primary">Submit</button>
