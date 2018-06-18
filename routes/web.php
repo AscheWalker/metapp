@@ -31,3 +31,6 @@ Route::get('/cursos', 'CursosController@show')->name('Cursos');
 Route::get('/cursos/ver', 'CursosController@show2')->name('VerCursos');
 Route::get('/cursos/crear', 'CursosController@create')->name('CrearCursos');
 Route::get('/cursos/nuevo', 'CursosController@store');
+
+Route::get('/planeamiento/{id}', 'Planeamiento@show')->name('Planeamiento');
+Route::get('/planeamientocheck', 'Planeamiento@check')->name('CheckPlaneamiento');
