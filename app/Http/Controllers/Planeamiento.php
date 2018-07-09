@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Pasos;
 use App\Respuestas;
+use App/Respuestaslog;
 
 class Planeamiento extends Controller
 {
@@ -49,6 +50,8 @@ class Planeamiento extends Controller
 	
 	public function checkejecucion(Request $request)
 	{
+		
+		$respuestaslog = Respuestaslog::create($request->all());
 		foreach($request->all() as $key=>$value)
 		{
 			$respuestas = Respuestas::where('id', (int)$value)->get();

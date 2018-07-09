@@ -8,5 +8,12 @@ class Respuestaslog extends Model
 {
     //
 	
+	protected $fillable = [
+		'sesion',
+		'actividad',
+		'paso',
+		'respuesta'
+	];
+	
 	protected $table = 'respuestaslog';
 }
