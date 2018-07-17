@@ -15,5 +15,5 @@ class Respuestaslog extends Model
 		'respuesta'
 	];
 	
-	protected $table = 'respuestaslog';
+	protected $table = 'respuestaslogs';
 }
