@@ -26,7 +26,7 @@ class ActividadesController extends Controller
     {
         //
 		
-		return view('ActividadesCrear');
+		return view('actividadesCrear');
     }
 
     /**
