@@ -26,7 +26,7 @@ class ActividadesController extends Controller
     {
         //
 		
-		return redirect()->route('CrearActividades');
+		return view('ActividadesCrear');
     }
 
     /**
