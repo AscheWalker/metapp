@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Pasos;
+use App\SubPasos;
 use Illuminate\Http\Request;
 
-class PasosController extends Controller
+class SubPasosController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -26,7 +26,7 @@ class PasosController extends Controller
     {
         //
 		
-		return view('pasosCrear');
+		return view('subpasosCrear');
     }
 
     /**
@@ -39,36 +39,36 @@ class PasosController extends Controller
     {
         //
 		
-		$pasos = Pasos::create($request->all());
-		return redirect()->route('Pasos');
+		$subpasos = SubPasos::create($request->all());
+		return redirect()->route('SubPasos');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Pasos  $pasos
+     * @param  \App\SubPasos  $subPasos
      * @return \Illuminate\Http\Response
      */
-    public function show(Pasos $pasos)
+    public function show(SubPasos $subPasos)
     {
         //
-		return view('pasos');
+		return view('subPasos');
     }
 	
-	public function show2(Pasos $pasos)
+	public function show2(SubPasos $subPasos)
     {
         //
-		$characters = Pasos::all();
-		return view('pasosVer')->withCharacters($characters);
+		$characters = SubPasos::all();
+		return view('subPasosVer')->withCharacters($characters);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Pasos  $pasos
+     * @param  \App\SubPasos  $subPasos
      * @return \Illuminate\Http\Response
      */
-    public function edit(Pasos $pasos)
+    public function edit(SubPasos $subPasos)
     {
         //
     }
@@ -77,10 +77,10 @@ class PasosController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Pasos  $pasos
+     * @param  \App\SubPasos  $subPasos
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Pasos $pasos)
+    public function update(Request $request, SubPasos $subPasos)
     {
         //
     }
@@ -88,10 +88,10 @@ class PasosController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Pasos  $pasos
+     * @param  \App\SubPasos  $subPasos
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Pasos $pasos)
+    public function destroy(SubPasos $subPasos)
     {
         //
     }

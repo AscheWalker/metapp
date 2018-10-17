@@ -32,6 +32,16 @@ Route::get('/cursos/ver', 'CursosController@show2')->name('VerCursos');
 Route::get('/cursos/crear', 'CursosController@create')->name('CrearCursos');
 Route::get('/cursos/nuevo', 'CursosController@store');
 
+Route::get('/pasos', 'PasosController@show')->name('Pasos');
+Route::get('/pasos/ver', 'PasosController@show2')->name('VerPasos');
+Route::get('/pasos/crear', 'PasosController@create')->name('CrearPasos');
+Route::get('/pasos/nuevo', 'PasosController@store');
+
+Route::get('/subpasos', 'SubPasosController@show')->name('SubPasos');
+Route::get('/subpasos/ver', 'SubPasosController@show2')->name('VerSubPasos');
+Route::get('/subpasos/crear', 'SubPasosController@create')->name('CrearSubPasos');
+Route::get('/subpasos/nuevo', 'SubPasosController@store');
+
 Route::get('/planeamiento/{id}', 'Planeamiento@show')->name('Planeamiento');
 Route::get('/planeamientocheck', 'Planeamiento@check')->name('CheckPlaneamiento');
 Route::get('/ejecucioncheck', 'Planeamiento@checkejecucion')->name('CheckEjecucion');
