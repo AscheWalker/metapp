@@ -26,7 +26,7 @@ class SubPasosController extends Controller
     {
         //
 		
-		return view('subpasosCrear');
+		return view('subPasosCrear');
     }
 
     /**
