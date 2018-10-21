@@ -8,5 +8,12 @@ class Pasos extends Model
 {
     //
 	
+	protected $fillable = [
+		'name',
+		'desc',
+		'actividad',
+		'order'
+	];
+	
 	protected $table = 'pasos';
 }
