@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Pasos;
 use Illuminate\Http\Request;
+use App\Actividades;
 
 class PasosController extends Controller
 {
@@ -25,7 +26,7 @@ class PasosController extends Controller
     public function create()
     {
         //
-		
+		$characters = Actividades::all();
 		return view('pasosCrear');
     }
 

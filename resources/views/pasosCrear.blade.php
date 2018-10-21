@@ -17,6 +17,14 @@
 							<label for="inputDesc">Descripcion de la pasos </label>
 							<input type="text" class="form-control" id="inputDesc" name="desc">
 						</div>
+						<div class="form-group">
+							<label for="selectActivity"> Actividad </label>
+							<select class="form-control" id="selectActivity" name="actividad">
+								@foreach($characters as $key => $value)
+									<option value={{ $value->id }} > {{ $value->name }} </option>
+								@endforeach
+							</select>
+						</div>
 						<button type="submit" class="btn btn-primary">Submit</button>
 					</form>
 				</div>
