@@ -12,7 +12,8 @@ class SubPasos extends Model
 		'name',
 		'desc',
 		'pasos',
-		'answer'
+		'answer',
+		'order'
 	];
 	
 	protected $table = 'sub_pasos';
