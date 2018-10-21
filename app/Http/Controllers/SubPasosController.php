@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\SubPasos;
 use Illuminate\Http\Request;
+use App\Pasos;
 
 class SubPasosController extends Controller
 {
@@ -25,8 +26,8 @@ class SubPasosController extends Controller
     public function create()
     {
         //
-		
-		return view('subPasosCrear');
+		$characters = Pasos::all();
+		return view('subPasosCrear')->withCharacters($characters);
     }
 
     /**
