@@ -27,7 +27,7 @@ class PasosController extends Controller
     {
         //
 		$characters = Actividades::all();
-		return view('pasosCrear');
+		return view('pasosCrear')->withCharacters($characters);
     }
 
     /**
