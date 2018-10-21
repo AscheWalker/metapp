@@ -16,7 +16,7 @@ class CreateRespuestasTable extends Migration
         Schema::create('respuestas', function (Blueprint $table) {
             $table->increments('id');
 			$table->integer('paso');
-			$table->string('desc');
+			$table->string('desc', 999);
 			$table->boolean('correcto');
             $table->timestamps();
         });

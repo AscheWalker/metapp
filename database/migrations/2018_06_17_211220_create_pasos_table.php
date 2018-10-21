@@ -16,8 +16,8 @@ class CreatePasosTable extends Migration
         Schema::create('pasos', function (Blueprint $table) {
             $table->increments('id');
 			$table->integer('actividad');
-			$table->string('name', 100);
-			$table->string('desc', 100);
+			$table->string('name', 999);
+			$table->string('desc', 999);
 			$table->integer('order');
             $table->timestamps();
         });

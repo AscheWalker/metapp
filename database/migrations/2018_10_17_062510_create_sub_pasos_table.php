@@ -16,9 +16,9 @@ class CreateSubPasosTable extends Migration
         Schema::create('sub_pasos', function (Blueprint $table) {
             $table->increments('id');
 			$table->integer('pasos');
-			$table->string('name', 100);
-			$table->string('desc', 100);
-			$table->string('answer', 100);
+			$table->string('name', 999);
+			$table->string('desc', 999);
+			$table->string('answer', 999);
 			$table->integer('order');
             $table->timestamps();
         });
