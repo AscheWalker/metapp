@@ -18,7 +18,7 @@ class AlexaSessions extends Migration
             $table->increments('id');
 			$table->string('alexa', 999);
 			$table->integer('actividad');
-			$table->string('paso');
+			$table->integer('paso');
             $table->timestamps();
         });
     }
