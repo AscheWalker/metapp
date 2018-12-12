@@ -61,7 +61,7 @@ class PasosController extends Controller
         //
 		$idActiv = $request->activId;
 		$characters = Pasos::where('actividad', $idActiv)->get();
-		return view('pasosVer')->withCharacters($characters);
+		return view('pasosVer')->withCharacters($characters, $idActiv);
     }
 
     /**
