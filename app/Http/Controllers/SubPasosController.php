@@ -61,7 +61,7 @@ class SubPasosController extends Controller
         //
 		$idPaso = $request->pasoId;
 		$characters = SubPasos::where('pasos', $idPaso)->get();
-		return view('subPasosVer')->withCharacters($characters);
+		return view('subPasosVer', compact('characters', 'idPaso'));
     }
 
     /**
