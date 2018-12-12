@@ -25,7 +25,7 @@
 									<td>{{ $value->desc }}</td>
 									<td>
 										<form method="post" action="{{ route('VerPasos') }}" accept-charset="UTF-8">
-											<input name="_meth" type="hidden" value={{ $value->id }}>
+											<input name="activId" type="hidden" value={{ $value->id }}>
 												{{ csrf_field() }}
 													{{ method_field('PUT') }}
 												<button type="submit" class="btn btn-sm btn-default">VER</button>

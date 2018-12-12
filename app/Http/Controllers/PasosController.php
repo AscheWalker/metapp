@@ -56,10 +56,11 @@ class PasosController extends Controller
 		return view('pasos');
     }
 	
-	public function show2(Pasos $pasos)
+	public function show2(Pasos $pasos, Request $request)
     {
         //
-		$characters = Pasos::all();
+		$idActiv = $request->activId;
+		$characters = Pasos::where('actividad', $idActiv);
 		return view('pasosVer')->withCharacters($characters);
     }
 
