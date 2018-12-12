@@ -14,6 +14,7 @@
 								<th scope="col">#</th>
 								<th scope="col">nombre</th>
 								<th scope="col">descripcion</th>
+								<th scope="col">ver</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -22,6 +23,15 @@
 									<th scope="row">{{ $value->id }}</th>
 									<td>{{ $value->name }}</td>
 									<td>{{ $value->desc }}</td>
+									<td>
+										<form method="post" action="{{ route('VerSubPasos') }}" accept-charset="UTF-8">
+											<input name="pasoId" type="hidden" value={{ $value->id }}>
+												{{ csrf_field() }}
+													{{ method_field('PUT') }}
+												<button type="submit" class="btn btn-sm btn-default">VER</button>
+											<input type="hidden" value="someVariable" />
+										</form>
+									</td>
 								</tr>
 							@endforeach
 						</tbody>
