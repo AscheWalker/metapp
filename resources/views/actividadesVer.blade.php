@@ -24,7 +24,7 @@
 									<td>{{ $value->name }}</td>
 									<td>{{ $value->desc }}</td>
 									<td>
-										<form method="GET" action="{{ route('VerPasos') }}" accept-charset="UTF-8">
+										<form method="POST" action="{{ route('VerPasos') }}" accept-charset="UTF-8">
 											<input name="_method" type="hidden" value={{ $value->id }}>
 												{{ csrf_field() }}
 												
