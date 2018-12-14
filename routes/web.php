@@ -34,7 +34,7 @@ Route::get('/cursos/nuevo', 'CursosController@store');
 
 Route::get('/pasos', 'PasosController@show')->name('Pasos');
 Route::put('/pasos/ver', 'PasosController@show2')->name('VerPasos');
-Route::get('/pasos/crear', 'PasosController@create')->name('CrearPasos');
+Route::put('/pasos/crear', 'PasosController@create')->name('CrearPasos');
 Route::get('/pasos/nuevo', 'PasosController@store');
 
 Route::get('/subpasos', 'SubPasosController@show')->name('SubPasos');
