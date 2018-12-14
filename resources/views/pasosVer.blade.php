@@ -35,7 +35,7 @@
 								</tr>
 							@endforeach
 							<tr>
-								<form method="post" action="{{ route('CrearPasos') }}" accept-charset="UTF-8">
+								<form method="post" action="{{ route('NuevoPasos') }}" accept-charset="UTF-8">
 									<input name="actividad" type="hidden" value={{ $idActiv }}>
 									<input name="order" type="hidden" value=1>
 												{{ csrf_field() }}

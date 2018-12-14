@@ -41,7 +41,7 @@ class PasosController extends Controller
         //
 		
 		$pasos = Pasos::create($request->all());
-		return redirect()->route('Pasos');
+		return Redirect::refresh();
     }
 
     /**
