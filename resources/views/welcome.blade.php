@@ -78,6 +78,9 @@
             @endif
 
             <div class="content">
+				<div class="flex-center">
+					<img src="{{ asset('images/Logo.png') }}">
+				</div>
                 <div class="title m-b-md">
                     Metapp
                 </div>
