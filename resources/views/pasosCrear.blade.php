@@ -10,25 +10,15 @@
 				<div class="card-body">
 					<form action="/pasos/nuevo" method="GET">
 						<div class="form-group">
-							<label for="inputName">Nombre de la pasos </label>
+							<label for="inputName">Nombre del paso </label>
 							<input type="text" class="form-control" id="inputName" name="name">
 						</div>
 						<div class="form-group">
-							<label for="inputDesc">Descripcion de la pasos </label>
+							<label for="inputDesc">Descripcion del paso </label>
 							<input type="text" class="form-control" id="inputDesc" name="desc">
 						</div>
-						<div class="form-group">
-							<label for="selectActivity"> Actividad </label>
-							<select class="form-control" id="selectActivity" name="actividad">
-								@foreach($characters as $key => $value)
-									<option value={{ $value->id }} > {{ $value->name }} </option>
-								@endforeach
-							</select>
-						</div>
-						<div class="form-group">
-							<label for="inputOrder"> Order </label>
-							<input type="number" class="form-control" id="inputOrder" name="order">
-						</div>
+							<input type="hidden" class="form-control" id="selectActivity" name="actividad" value={{ $idActiv }}>
+							<input type="hidden" class="form-control" id="inputOrder" name="order" value=1>
 						<button type="submit" class="btn btn-primary">Submit</button>
 					</form>
 				</div>

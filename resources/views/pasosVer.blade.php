@@ -5,7 +5,14 @@
 	<div class="row justify-content-center">
 		<div class="col-md-8">
 			<div class="card">
-				<div class="card-header">Pasos {{ $idActiv }}</div>
+				<div class="card-header">Pasos {{ $idActiv }}
+				<form method="post" action="{{ route('CrearPasos') }}" accept-charset="UTF-8">
+					<input name="pasoId" type="hidden" value={{ $idActiv}}>
+						{{ csrf_field() }}
+						{{ method_field('PUT') }}
+					<button type="submit" class="btn btn-sm btn-default">Nuevo</button>
+				</form>
+				</div>
 				
 				<div class="card-body">
 					<table class="table">
