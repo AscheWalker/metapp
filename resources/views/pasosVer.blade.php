@@ -12,7 +12,7 @@
 						{{ method_field('PUT') }}
 					<button type="submit" class="btn btn-sm btn-default">Nuevo</button>
 				</form>
-				<form method="post" action="{{ route('VerActividades') }}" accept-charset="UTF-8">
+				<form method="get" action="{{ route('VerActividades') }}" accept-charset="UTF-8">
 					<button type="submit" class="btn btn-sm btn-default">Volver</button>
 				</form>
 				</div>
@@ -36,6 +36,8 @@
 									<td>
 										<form method="post" action="{{ route('VerSubPasos') }}" accept-charset="UTF-8">
 											<input name="activId" type="hidden" value={{ $idActiv }}>
+												{{ csrf_field() }}
+													{{ method_field('PUT') }}
 											<input name="pasoId" type="hidden" value={{ $value->id }}>
 												{{ csrf_field() }}
 													{{ method_field('PUT') }}
