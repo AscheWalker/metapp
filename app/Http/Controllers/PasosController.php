@@ -42,7 +42,9 @@ class PasosController extends Controller
         //
 		
 		$pasos = Pasos::create($request->all());
-		return back();
+		$idActiv = $request->actividad;
+		$characters = Pasos::where('actividad', $idActiv)->get();
+		return view('pasosVer', compact('characters', 'idActiv'));
     }
 
     /**
