@@ -41,8 +41,8 @@
 												{{ csrf_field() }}
 													{{ method_field('PUT') }}
 									<th scope="row">Auto</th>
-									<td><input type="text" class="form-control" id="inputName" name="name"></td>
-									<td><input type="text" class="form-control" id="inputDesc" name="desc"></td>
+									<td><input type="text" name="name"></td>
+									<td><input type="text" name="desc"></td>
 									<td><button type="submit" class="btn btn-sm btn-default">Crear</button></td>
 								</form>
 							</tr>
