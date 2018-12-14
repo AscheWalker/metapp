@@ -18,9 +18,12 @@
 							<input type="text" class="form-control" id="inputDesc" name="desc">
 						</div>
 							<input type="hidden" class="form-control" id="selectActivity" name="actividad" value={{ $idActiv }}>
-							<input type="hidden" class="form-control" id="inputOrder" name="order" value=1>
 							{{ csrf_field() }}
 							{{ method_field('PUT') }}
+						<div class="form-group">
+							<label for="inputOrder"> Order </label>
+							<input type="number" min="1" step="1" class="form-control" id="inputOrder" name="order">
+						</div>
 						<button type="submit" class="btn btn-primary">Submit</button>
 					</form>
 				</div>

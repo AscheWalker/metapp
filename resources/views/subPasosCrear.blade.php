@@ -17,14 +17,9 @@
 							<label for="inputDesc">Descripcion de los sub pasos </label>
 							<input type="text" class="form-control" id="inputDesc" name="desc">
 						</div>
-						<div class="form-group">
-							<label for="selectStep"> Paso </label>
-							<select class="form-control" id="selectStep" name="pasos">
-								@foreach($characters as $key => $value)
-									<option value={{ $value->id }} > {{ $value->name }} </option>
-								@endforeach
-							</select>
-						</div>
+						<input type="hidden" class="form-control" id="selectSteps" name="pasos" value={{ $idPaso }}>
+							{{ csrf_field() }}
+							{{ method_field('PUT') }}
 						<div class="form-group">
 							<label for="inputAnswer"> Answer </label>
 							<input type="text" class="form-control" id="inputAnswer" name="answer">
