@@ -23,11 +23,12 @@ class PasosController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
         //
-		$characters = Actividades::all();
-		return view('pasosCrear')->withCharacters($characters);
+		$idActiv = $request->activId;
+		//$characters = Actividades::where('id', $idActiv);
+		return view('pasosCrear', compact('idActiv'));
     }
 
     /**
@@ -41,7 +42,7 @@ class PasosController extends Controller
         //
 		
 		$pasos = Pasos::create($request->all());
-		return Redirect::refresh();
+		return back();
     }
 
     /**
