@@ -7,7 +7,7 @@
 			<div class="card">
 				<div class="card-header">Pasos {{ $idActiv }}
 				<form method="post" action="{{ route('CrearPasos') }}" accept-charset="UTF-8">
-					<input name="pasoId" type="hidden" value={{ $idActiv}}>
+					<input name="activId" type="hidden" value={{ $idActiv}}>
 						{{ csrf_field() }}
 						{{ method_field('PUT') }}
 					<button type="submit" class="btn btn-sm btn-default">Nuevo</button>
