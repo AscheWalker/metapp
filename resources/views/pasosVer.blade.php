@@ -6,15 +6,13 @@
 		<div class="col-md-8">
 			<div class="card">
 				<div class="card-header">Pasos
-				<form method="post" action="{{ route('CrearPasos') }}" accept-charset="UTF-8">
+				<form method="post" action="{{ route('CrearPasos') }}" accept-charset="UTF-8" style="display: inline">
 					<input name="activId" type="hidden" value={{ $idActiv}}>
 						{{ csrf_field() }}
 						{{ method_field('PUT') }}
 					<button type="submit" class="btn btn-sm btn-default">Nuevo</button>
 				</form>
-				<form method="get" action="{{ route('VerActividades') }}" accept-charset="UTF-8">
-					<button type="submit" class="btn btn-sm btn-default">Volver</button>
-				</form>
+				<a href="javascript:history.back()" style="display: inline" ><button class="btn btn-sm btn-default">Volver</button></a>
 				</div>
 				
 				<div class="card-body">

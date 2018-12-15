@@ -41,12 +41,6 @@
 						<li class="nav-item">
 							<a class="nav-link" href="{{ route('Actividades') }}"> Actividades</a>
 						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="{{ route('Pasos') }}"> Pasos</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="{{ route('SubPasos') }}"> Sub Pasos</a>
-						</li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
