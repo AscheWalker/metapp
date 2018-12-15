@@ -13,10 +13,11 @@
 					<button type="submit" class="btn btn-sm btn-default">Nuevo</button>
 				</form>
 				<form method="post" action="{{ route('VerPasos') }}" accept-charset="UTF-8" style="display: inline">
-					<input name="activId" type="hidden" value={{ $idPaso }}>
-						{{ csrf_field() }}
-						{{ method_field('PUT') }}
-					<button type="submit" class="btn btn-sm btn-default">Volver</button>
+											<input name="activId" type="hidden" value={{ $idPaso }}>
+												{{ csrf_field() }}
+													{{ method_field('PUT') }}
+												<button type="submit" class="btn btn-sm btn-default">Volver</button>
+											<input type="hidden" value="someVariable" />
 				</form>
 				</div>
 				
