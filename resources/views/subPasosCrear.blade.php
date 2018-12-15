@@ -8,7 +8,7 @@
 				<div class="card-header">Crear Sub Pasos</div>
 				
 				<div class="card-body">
-					<form action="/subpasos/nuevo" method="GET">
+					<form action="/subpasos/nuevo" method="POST">
 						<div class="form-group">
 							<label for="inputName">Nombre de los sub pasos </label>
 							<input type="text" class="form-control" id="inputName" name="name">
