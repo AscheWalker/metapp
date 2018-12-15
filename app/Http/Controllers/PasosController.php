@@ -44,8 +44,7 @@ class PasosController extends Controller
 		$pasos = Pasos::create($request->all());
 		$idActiv = $request->actividad;
 		$characters = Pasos::where('actividad', $idActiv)->get();
-		return back()->withInput();
-		//return view('pasosVer', compact('characters', 'idActiv'));
+		return view('pasosVer', compact('characters', 'idActiv'));
     }
 
     /**

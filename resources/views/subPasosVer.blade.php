@@ -12,7 +12,12 @@
 						{{ method_field('PUT') }}
 					<button type="submit" class="btn btn-sm btn-default">Nuevo</button>
 				</form>
-						<a href="javascript:history.back()" style="display: inline" ><button class="btn btn-sm btn-default">Volver</button></a>
+				<form method="post" action="{{ route('VerPasos') }}" accept-charset="UTF-8" style="display: inline">
+					<input name="activId" type="hidden" value={{ $idPaso }}>
+						{{ csrf_field() }}
+						{{ method_field('PUT') }}
+					<button type="submit" class="btn btn-sm btn-default">Volver</button>
+				</form>
 				</div>
 				
 				<div class="card-body">
