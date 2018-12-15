@@ -12,7 +12,7 @@
 						{{ method_field('PUT') }}
 					<button type="submit" class="btn btn-sm btn-default">Nuevo</button>
 				</form>
-						<a href="javascript:history.back()" class="btn btn-sm btn-default">Volver</button>
+						<a href="javascript:history.back()" class="btn btn-sm btn-default"><button class="btn btn-sm btn-default">Volver</button></a>
 				</div>
 				
 				<div class="card-body">
