@@ -47,18 +47,6 @@
 									</td>
 								</tr>
 							@endforeach
-							<tr>
-								<form method="post" action="{{ route('NuevoPasos') }}" accept-charset="UTF-8">
-									<input name="actividad" type="hidden" value={{ $idActiv }}>
-									<input name="order" type="hidden" value=1>
-												{{ csrf_field() }}
-													{{ method_field('PUT') }}
-									<th scope="row">Auto</th>
-									<td><input type="text" name="name"></td>
-									<td><input type="text" name="desc"></td>
-									<td><button type="submit" class="btn btn-sm btn-default">Crear</button></td>
-								</form>
-							</tr>
 						</tbody>
 					</table>
 				</div>
