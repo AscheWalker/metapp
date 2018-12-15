@@ -12,7 +12,9 @@
 						{{ method_field('PUT') }}
 					<button type="submit" class="btn btn-sm btn-default">Nuevo</button>
 				</form>
-				<a href="{{ url()->previous() }}" class="btn btn-default">volver</a>
+				<form method="post" action="{{ url()->previous() }}" accept-charset="UTF-8">
+						<button type="submit" class="btn btn-sm btn-default">Volver</button>
+				</form>
 				</div>
 				
 				<div class="card-body">
