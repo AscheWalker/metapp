@@ -24,10 +24,7 @@
 							<label for="inputAnswer"> Answer </label>
 							<input type="text" class="form-control" id="inputAnswer" name="answer">
 						</div>
-						<div class="form-group">
-							<label for="inputOrder"> Order </label>
-							<input type="number" class="form-control" id="inputOrder" name="order">
-						</div>
+							<input type="hidden" class="form-control" id="inputOrder" name="order" value=1>
 						<button type="submit" class="btn btn-primary">Submit</button>
 					</form>
 				</div>
