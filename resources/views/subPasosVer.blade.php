@@ -6,7 +6,7 @@
 		<div class="col-md-8">
 			<div class="card">
 				<div class="card-header">Sub Pasos
-				<form method="post" action="{{ route('CrearSubPasos') }}" accept-charset="UTF-8" style="display: inline">
+				<form method="post" action="{{ route('CrearPasos') }}" accept-charset="UTF-8" style="display: inline">
 					<input name="pasoId" type="hidden" value={{ $idPaso }}>
 						{{ csrf_field() }}
 						{{ method_field('PUT') }}

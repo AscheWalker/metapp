@@ -39,8 +39,8 @@ Route::put('/pasos/nuevo', 'PasosController@store')->name('NuevoPasos');
 
 Route::get('/subpasos', 'SubPasosController@show')->name('SubPasos');
 Route::put('/subpasos/ver', 'SubPasosController@show2')->name('VerSubPasos');
-Route::get('/subpasos/crear', 'SubPasosController@create')->name('CrearSubPasos');
-Route::get('/subpasos/nuevo', 'SubPasosController@store');
+Route::put('/subpasos/crear', 'SubPasosController@create')->name('CrearSubPasos');
+Route::put('/subpasos/nuevo', 'SubPasosController@store')->name('NuevoSubPasos');
 
 Route::get('/planeamiento/{id}', 'Planeamiento@show')->name('Planeamiento');
 Route::get('/planeamientocheck', 'Planeamiento@check')->name('CheckPlaneamiento');

@@ -23,11 +23,11 @@ class SubPasosController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
         //
-		$characters = Pasos::all();
-		return view('subPasosCrear')->withCharacters($characters);
+		$idPaso = $request->pasoId;
+		return view('subPasosCrear', compact('idPaso'));
     }
 
     /**
@@ -41,7 +41,9 @@ class SubPasosController extends Controller
         //
 		
 		$subpasos = SubPasos::create($request->all());
-		return redirect()->route('SubPasos');
+		$idPaso = $request->pasos;
+		$characters = Pasos::where('actividad', $idPaso)->get();
+		return view('subPasosVer', compact('characters'));
     }
 
     /**
