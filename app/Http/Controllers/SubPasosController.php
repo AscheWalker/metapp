@@ -61,9 +61,10 @@ class SubPasosController extends Controller
 	public function show2(SubPasos $subPasos, Request $request)
     {
         //
+		$idActiv = $request->activId;
 		$idPaso = $request->pasoId;
 		$characters = SubPasos::where('pasos', $idPaso)->get();
-		return view('subPasosVer', compact('characters', 'idPaso'));
+		return view('subPasosVer', compact('characters', 'idPaso', 'idActiv'));
     }
 
     /**
