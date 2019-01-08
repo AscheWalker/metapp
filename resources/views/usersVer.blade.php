@@ -39,8 +39,9 @@
 	(document).ready(
 	function Function() {
 		location.reload();
-	}
+	});
 	
+	(document).ready(
 	function myFunction() {
 	  // Declare variables 
 	  var input, filter, table, tr, td, i, txtValue;
