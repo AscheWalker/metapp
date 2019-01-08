@@ -10,6 +10,7 @@
 				
 				<div class="card-body">
 					<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for name">
+					<button onclick="myFunction()">buscar</button>
 					<table class="table" id="myTable">
 						<thead>
 							<tr>
