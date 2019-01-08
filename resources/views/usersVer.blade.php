@@ -9,8 +9,8 @@
 				</div>
 				
 				<div class="card-body">
-					<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for name">
-					<button onclick="Function()">buscar</button>
+					<input type="text" id="myInput" onkeyup="myFunctionKyoPersTable()" placeholder="Search for name">
+					<button onclick="Funcreset()">buscar</button>
 					<table class="table" id="myTable">
 						<thead>
 							<tr>
@@ -36,11 +36,11 @@
 
 @section('javascript')
 <script>
-	$(document).ready(function Function() {
+	function Funcreset() {
 		location.reload();
-	});
+	}
 	
-	$(document).ready(function myFunction() {
+	function myFunctionKyoPersTable() {
 	  // Declare variables 
 	  var input, filter, table, tr, td, i, txtValue;
 	  input = document.getElementById("myInput");
@@ -61,6 +61,5 @@
 		} 
 	  }
 	}
-	);
 </script>
 @endsection
