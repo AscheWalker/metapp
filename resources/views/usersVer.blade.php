@@ -36,6 +36,7 @@
 
 @section('javascript')
 <script>
+	(document).ready(
 	function Function() {
 		location.reload();
 	}
@@ -61,5 +62,6 @@
 		} 
 	  }
 	}
+	);
 </script>
 @endsection
