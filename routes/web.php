@@ -45,3 +45,5 @@ Route::put('/subpasos/nuevo', 'SubPasosController@store')->name('NuevoSubPasos')
 Route::get('/planeamiento/{id}', 'Planeamiento@show')->name('Planeamiento');
 Route::get('/planeamientocheck', 'Planeamiento@check')->name('CheckPlaneamiento');
 Route::get('/ejecucioncheck', 'Planeamiento@checkejecucion')->name('CheckEjecucion');
+
+Route::get('/usuarios/ver', 'UsersController@show')->name('VerUsuarios');
