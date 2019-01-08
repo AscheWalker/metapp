@@ -10,7 +10,7 @@
 				
 				<div class="card-body">
 					<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for name">
-					<button onclick="myFunction()">buscar</button>
+					<button onclick="Function()">buscar</button>
 					<table class="table" id="myTable">
 						<thead>
 							<tr>
@@ -36,6 +36,10 @@
 
 @section('javascript')
 <script>
+	function Function() {
+		location.reload();
+	}
+	
 	function myFunction() {
 	  // Declare variables 
 	  var input, filter, table, tr, td, i, txtValue;
