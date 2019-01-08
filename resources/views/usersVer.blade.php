@@ -9,9 +9,9 @@
 				</div>
 				
 				<div class="card-body">
-					<input type="text" id="myInput" onkeyup="myFunctionKyoPersTable()" placeholder="Search for name">
+					<input type="text" id="myInputKyoUsers" onkeyup="myFunctionKyoPersTable()" placeholder="Search for name">
 					<button onclick="Funcreset()">buscar</button>
-					<table class="table" id="myTable">
+					<table class="table" id="myTableKyoUsers">
 						<thead>
 							<tr>
 								<th scope="col">#</th>
@@ -36,16 +36,13 @@
 
 @section('javascript')
 <script>
-	function Funcreset() {
-		location.reload();
-	}
 	
 	function myFunctionKyoPersTable() {
 	  // Declare variables 
 	  var input, filter, table, tr, td, i, txtValue;
-	  input = document.getElementById("myInput");
+	  input = document.getElementById("myInputKyoUsers");
 	  filter = input.value.toUpperCase();
-	  table = document.getElementById("myTable");
+	  table = document.getElementById("myTableKyoUsers");
 	  tr = table.getElementsByTagName("tr");
 
 	  // Loop through all table rows, and hide those who don't match the search query
