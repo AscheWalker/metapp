@@ -24,6 +24,7 @@
 								<th scope="col">#</th>
 								<th scope="col">nombre</th>
 								<th scope="col">descripcion</th>
+								<th scope="col">orden</th>
 								<th scope="col">ver</th>
 							</tr>
 						</thead>
@@ -33,6 +34,7 @@
 									<th scope="row">{{ $value->id }}</th>
 									<td>{{ $value->name }}</td>
 									<td>{{ $value->desc }}</td>
+									<td>{{ $value->order }}</td>
 									<td>
 										<form method="post" action="{{ route('VerSubPasos') }}" accept-charset="UTF-8">
 											<input name="activId" type="hidden" value={{ $idActiv }}>
