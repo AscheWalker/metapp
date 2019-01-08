@@ -10,7 +10,6 @@
 				
 				<div class="card-body">
 					<input type="text" id="myInputKyoUsers" onkeyup="myFunctionKyoPersTable()" placeholder="Search for name">
-					<button onclick="myFunctionKyoPersTable()">buscar</button>
 					<table class="table" id="myTableKyoUsers">
 						<thead>
 							<tr>
