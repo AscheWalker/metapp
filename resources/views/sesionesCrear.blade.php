@@ -10,10 +10,10 @@
 				<div class="card-body">
 					<form action="/sesiones/nuevo" method="GET">
 						<div class="form-group">
-							<label for="inputClass">Curso de la sesion </label>
-							<select class="form-control" id="inputClass" name="curso">
+							<label for="inputClass">Actividad </label>
+							<select class="form-control kyo-Select2-activ" id="inputClass" name="curso">
 								@foreach($characters as $key => $value)
-									<option value={{ $value->id }}>{{ $value->name}}, {{ $value->ano }}</option>
+									<option value={{ $value->id }}>{{ $value->id }} - {{ $value->name}}</option>
 								@endforeach
 							</select>
 						</div>
@@ -36,4 +36,12 @@
 		</div>
 	</div>	
 </div>
+@endsection
+
+@section('javascript')
+<script>
+$(document).ready(function() {
+    $('.js-example-basic-single').select2();
+});
+</script>
 @endsection
