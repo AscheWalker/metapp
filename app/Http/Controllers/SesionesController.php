@@ -64,7 +64,8 @@ class SesionesController extends Controller
     {
         //
 		$characters = Sesiones::all();
-		return view('sesionesVer')->withCharacters($characters);
+		$activ = Actividades::all();
+		return view('sesionesVer', compact('characters', 'activ'));
     }
 
     /**
