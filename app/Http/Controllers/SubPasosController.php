@@ -43,7 +43,7 @@ class SubPasosController extends Controller
 		$subpasos = SubPasos::create($request->all());
 		$idPaso = $request->pasos;
 		$characters = Pasos::where('actividad', $idPaso)->get();
-		return view('subPasosVer', compact('characters', 'idPaso', $_SESSION['idActiv']));
+		return view('subPasosVer', compact('characters', 'idPaso', session(['idActiv')));
     }
 
     /**
@@ -64,7 +64,7 @@ class SubPasosController extends Controller
 		$idActiv = $request->activId;
 		$idPaso = $request->pasoId;
 		$characters = SubPasos::where('pasos', $idPaso)->get();
-		$_SESSION['idActiv']=$idActiv;
+		session(['idActiv' => $idActiv]);
 		return view('subPasosVer', compact('characters', 'idPaso', 'idActiv'));
     }
 
