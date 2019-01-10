@@ -42,7 +42,7 @@ class SubPasosController extends Controller
 		
 		$subpasos = SubPasos::create($request->all());
 		$idPaso = $request->pasos;
-		$characters = Pasos::where('pasos', $idPaso)->get();
+		$characters = SubPasos::where('pasos', $idPaso)->get();
 		$idActiv = session('idActiv');
 		return view('subPasosVer', compact('characters', 'idPaso', 'idActiv'));
     }
