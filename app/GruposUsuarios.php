@@ -12,5 +12,5 @@ class GruposUsuarios extends Model
 		'id-usuario'
 	];
 	
-	protected $table = 'grupos';
+	protected $table = 'grupos_usuarios';
 }
