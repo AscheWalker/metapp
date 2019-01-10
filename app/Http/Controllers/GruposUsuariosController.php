@@ -46,7 +46,7 @@ class GruposUsuariosController extends Controller
 		$miembros = GruposUsuarios::create($request->all());
 		$idGrupo = $request->id-grupo;
 		$characters = GruposUsuarios::where('id-grupo', $idGrupo)->get();
-		return view('subPasosVer', compact('characters', 'idGrupo'));
+		return view('miembrosVer', compact('characters', 'idGrupo'));
     }
 
     /**
