@@ -5,7 +5,7 @@
 	<div class="row justify-content-center">
 		<div class="col-md-8">
 			<div class="card">
-				<div class="card-header">Pasos
+				<div class="card-header">Grupos
 				<form method="post" action="{{ route('CrearGrupos') }}" accept-charset="UTF-8" style="display: inline">
 					<input name="sesionId" type="hidden" value={{ $idSesion}}>
 						{{ csrf_field() }}
@@ -35,6 +35,9 @@
 									<td>TBA</td>
 									<td>
 										<form method="post" action="{{ route('VerMiembros') }}" accept-charset="UTF-8">
+											<input name="sesionId" type="hidden" value={{ $idSesion }}>
+												{{ csrf_field() }}
+													{{ method_field('PUT') }}
 											<input name="grupoId" type="hidden" value={{ $value->id }}>
 												{{ csrf_field() }}
 													{{ method_field('PUT') }}

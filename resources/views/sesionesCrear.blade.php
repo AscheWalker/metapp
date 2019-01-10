@@ -41,7 +41,7 @@
 @section('javascript')
 <script>
 $(document).ready(function() {
-    $('.js-example-basic-single').select2();
+    $('.kyo-Select2-activ').select2();
 });
 </script>
 @endsection

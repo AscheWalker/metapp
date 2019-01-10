@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\GruposUsuarios;
 use Illuminate\Http\Request;
 
+use App\User;
+
 class GruposUsuariosController extends Controller
 {
     /**
@@ -22,9 +24,13 @@ class GruposUsuariosController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
         //
+		
+		$idGrupo = $request->grupoId;
+		$characters = User::all();
+		return view('miembrosCrear', compact('characters', 'idGrupo'));
     }
 
     /**
@@ -47,6 +53,15 @@ class GruposUsuariosController extends Controller
     public function show(GruposUsuarios $gruposUsuarios)
     {
         //
+    }
+	
+	public function show2(GruposUsuarios $gruposUsuarios, Request $request)
+    {
+        //
+		$idGrupo = $request->grupoId;
+		$idSesion = $request->sesionId;
+		$characters = GruposUsuarios::where('id-grupo', $idPaso)->get();
+		return view('MiembrosVer', compact('characters', 'idGrupo', 'idSesion'));
     }
 
     /**

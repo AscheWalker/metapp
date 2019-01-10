@@ -50,4 +50,7 @@ Route::put('/grupos/ver', 'GruposController@show2')->name('VerGrupos');
 Route::put('/grupos/crear', 'GruposController@create')->name('CrearGrupos');
 Route::put('/grupos/nuevo', 'GruposController@store')->name('NuevoGrupos');
 
+Route::put('/miembros/ver', 'GruposUsuariosController@show2')->name('VerMiembros');
+Route::put('/miembros/crear', 'GruposUsuariosController@create')->name('CrearMiembros');
+
 Route::get('/usuarios/ver', 'UsersController@show')->name('VerUsuarios');
