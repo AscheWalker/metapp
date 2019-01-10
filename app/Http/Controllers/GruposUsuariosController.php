@@ -46,7 +46,8 @@ class GruposUsuariosController extends Controller
 		$miembros = GruposUsuarios::create($request->all());
 		$idGrupo = $request->{'id-grupo'};
 		$characters = GruposUsuarios::where('id-grupo', $idGrupo)->get();
-		return view('miembrosVer', compact('characters', 'idGrupo'));
+		$idSesion = session('idSesion');
+		return view('miembrosVer', compact('characters', 'idGrupo', 'idSesion'));
     }
 
     /**
@@ -66,6 +67,7 @@ class GruposUsuariosController extends Controller
 		$idGrupo = $request->grupoId;
 		$idSesion = $request->sesionId;
 		$characters = GruposUsuarios::where('id-grupo', $idGrupo)->get();
+		session(['idSesion' => $idSesion]);
 		return view('miembrosVer', compact('characters', 'idGrupo', 'idSesion'));
     }
 
