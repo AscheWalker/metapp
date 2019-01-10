@@ -14,6 +14,7 @@
 								<th scope="col">#</th>
 								<th scope="col">Actividad</th>
 								<th scope="col">Descripcion</th>
+								<th scope="col">ver</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -26,6 +27,15 @@
 										@endif
 									@endforeach
 									<td>{{ $value->desc }}</td>
+									<td>
+										<form method="post" action="{{ route('VerGrupos') }}" accept-charset="UTF-8">
+											<input name="sesionId" type="hidden" value={{ $value->id }}>
+												{{ csrf_field() }}
+													{{ method_field('PUT') }}
+												<button type="submit" class="btn btn-sm btn-default">VER</button>
+											<input type="hidden" value="someVariable" />
+										</form>
+									</td>
 								</tr>
 							@endforeach
 						</tbody>
