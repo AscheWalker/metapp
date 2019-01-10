@@ -6,6 +6,7 @@ use App\Sesiones;
 use Illuminate\Http\Request;
 
 use App\Cursos;
+use App\Actividades;
 
 class SesionesController extends Controller
 {
@@ -28,7 +29,7 @@ class SesionesController extends Controller
     {
         //
 		
-		$characters = Cursos::all();
+		$characters = Actividades::all();
 		return view('sesionesCrear')->withCharacters($characters);
     }
 
