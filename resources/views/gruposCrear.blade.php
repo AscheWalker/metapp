@@ -13,7 +13,7 @@
 							<label for="inputName">Nombre del grupo </label>
 							<input type="text" class="form-control" id="inputName" name="name" required>
 						</div>
-							<input type="hidden" class="form-control" id="selectSesion" name="sesion" value={{ $idSesion }}>
+							<input type="hidden" class="form-control" id="selectSesion" name="id-sesion" value={{ $idSesion }}>
 							{{ csrf_field() }}
 							{{ method_field('PUT') }}
 						<button type="submit" class="btn btn-primary">Submit</button>
