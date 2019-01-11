@@ -44,7 +44,7 @@ class GruposController extends Controller
         //
 		
 		$grupos = Grupos::create($request->all());
-		$idSesion = $request->sesion;
+		$idSesion = $request->{'id-sesion'};
 		$characters = Grupos::where('id-sesion', $idSesion)->get();
 		return view('gruposVer', compact('characters', 'idSesion'));
     }
