@@ -33,7 +33,11 @@
 							@foreach($characters as $key => $value)
 								<tr>
 									<th scope="row">{{ $value->id }}</th>
-									<td>{{ $value->name }}</td>
+									@foreach($usuarios as $thingy)
+										@if($value->{'id-usuario'} == $thingy->id)
+											<td>{{ $thingy->name }}</td>
+										@endif
+									@endforeach
 								</tr>
 							@endforeach
 						</tbody>
