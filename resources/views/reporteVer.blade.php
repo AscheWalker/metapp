@@ -12,7 +12,7 @@
 						<thead>
 							<tr>
 								@foreach($datos as $key => $value) 
-									@foreach($value as $key2 => $value2)
+									@foreach($value as $key2)
 										<th scope="col">{{ $key2 }}</th>
 									@endforeach
 									@break
@@ -23,7 +23,7 @@
 						<!---
 							@foreach($datos as $key => $value)
 								<tr>
-									<th scope="row">{{ $value }}</th>
+									<th scope="row">{{ $value->id }}</th>
 								</tr>
 							@endforeach
 						--->
