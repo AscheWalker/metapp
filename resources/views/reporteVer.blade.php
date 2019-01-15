@@ -12,7 +12,7 @@
 						<thead>
 							<tr>
 							<!---
-								@foreach((get_object_vars($datos->0->0)) as $value) 
+								@foreach($datos as $value) 
 									<th scope="col">{{ $value }}</th>
 								@endforeach
 							--->
