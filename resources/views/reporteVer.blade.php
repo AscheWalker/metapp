@@ -17,7 +17,7 @@
 						<tbody>
 							@foreach($datos as $key => $value)
 								<tr>
-									<th scope="row">{{ $key }}</th>
+									<th scope="row">{{ $value }}</th>
 								</tr>
 							@endforeach
 						</tbody>
