@@ -11,7 +11,7 @@
 					<table class="table">
 						<thead>
 							<tr>
-								@foreach(get_object_vars($datos[0][0]) as $name => $value) 
+								@foreach((array)(get_object_vars($datos[0][0])) as $value) 
 									<th scope="col">{{ $value }}</th>
 								@endforeach
 							</tr>
