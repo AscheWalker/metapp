@@ -5,17 +5,15 @@
 	<div class="row justify-content-center">
 		<div class="col-md-8">
 			<div class="card">
-				<div class="card-header">Reportes temporal {{ $datos }}</div>
+				<div class="card-header">Reportes temporal</div>
 				
 				<div class="card-body">
 					<table class="table">
 						<thead>
 							<tr>
-							<!---
-								@foreach($datos as $value) 
+								@foreach($datos as $key => $value) 
 									<th scope="col">{{ $value }}</th>
 								@endforeach
-							--->
 							</tr>
 						</thead>
 						<tbody>
