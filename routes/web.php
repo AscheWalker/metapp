@@ -56,4 +56,4 @@ Route::put('/miembros/nuevo', 'GruposUsuariosController@store')->name('NuevoMiem
 
 Route::get('/usuarios/ver', 'UsersController@show')->name('VerUsuarios');
 
-Route::get('/reporte/ver', 'ReporteController@show')->name('VerReporte');
+Route::get('/reporte/ver', 'ReporteController@show2')->name('VerReporte');
