@@ -11,15 +11,19 @@
 					<table class="table">
 						<thead>
 							<tr>
-								<th scope="col">#</th>
+								@foreach(get_class_vars($datos[0][0]) as $value) 
+									<th scope="col">{{ $value }}</th>
+								@endforeach
 							</tr>
 						</thead>
 						<tbody>
+						<!---
 							@foreach($datos as $key => $value)
 								<tr>
 									<th scope="row">{{ $value }}</th>
 								</tr>
 							@endforeach
+						--->
 						</tbody>
 					</table>
 				</div>
