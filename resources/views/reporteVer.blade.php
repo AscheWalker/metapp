@@ -5,15 +5,17 @@
 	<div class="row justify-content-center">
 		<div class="col-md-8">
 			<div class="card">
-				<div class="card-header">Reportes temporal</div>
+				<div class="card-header">Reportes temporal {{ $datos }}</div>
 				
 				<div class="card-body">
 					<table class="table">
 						<thead>
 							<tr>
+							<!---
 								@foreach((get_object_vars($datos->0->0)) as $value) 
 									<th scope="col">{{ $value }}</th>
 								@endforeach
+							--->
 							</tr>
 						</thead>
 						<tbody>
