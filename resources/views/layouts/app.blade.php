@@ -45,6 +45,15 @@
 						<li class="nav-item">
 							<a class="nav-link" href="{{ route('Actividades') }}"> Actividades</a>
 						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="{{ route('Sesiones') }}"> Sesiones</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="{{ route('VerUsuarios') }}"> Usuarios</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="{{ route('VerReporte') }}"> Reporte</a>
+						</li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
