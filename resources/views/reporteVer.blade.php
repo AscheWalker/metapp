@@ -12,7 +12,7 @@
 						<thead>
 							<tr>
 								@foreach($datos as $key => $value) 
-									@foreach(array_keys($value) as $key2)
+									@foreach(get_object_vars($value) as $key2)
 										<th scope="col">{{ $key2 }}</th>
 									@endforeach
 									@break
