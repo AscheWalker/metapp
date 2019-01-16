@@ -1,7 +1,7 @@
 <?php
 
 use App\Exports\ReporteExport;
-use Maatwebsite\Excel\Facades\Excel
+use Maatwebsite\Excel\Facades\Excel;
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
