@@ -23,7 +23,7 @@
 							@foreach($datos as $key => $value)
 								<tr>
 									@foreach(get_object_vars($value) as $key2 => $value2)
-										<th>{{ $value }}</th>
+										<th>{{ $value2 }}</th>
 									@endforeach
 								</tr>
 							@endforeach
