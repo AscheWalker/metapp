@@ -9,7 +9,7 @@
 				</div>
 				
 				<div class="card-body">
-					<input type="text" id="myInputKyoUsers" onkeyup="myFunctionKyoPersTable()" placeholder="Search for name">
+					<input type="text" id="myInputKyoUsers" onkeyup="myFunctionKyoPersTable()" placeholder="Buscar por nombre">
 					<table class="table" id="myTableKyoUsers">
 						<thead>
 							<tr>

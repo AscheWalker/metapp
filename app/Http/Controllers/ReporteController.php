@@ -59,7 +59,7 @@ class ReporteController extends Controller
 					->leftJoin('logs__tipos', 'logs.Id-tipo', '=', 'logs__tipos.id')
 					->select(
 							'logs.id as ID',
-							'logs.Id-usuario as "Id Usuario"',
+							'logs.Id-usuario as Id Usuario',
 							'users.name as Usuario',
 							'logs.Id-sesion as Sesion',
 							'logs.Id-actividad as Actividad',
