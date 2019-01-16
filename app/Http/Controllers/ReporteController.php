@@ -1,11 +1,12 @@
 <?php
 
-use App\Exports\ReporteExport;
-use Maatwebsite\Excel\Facades\Excel;
+
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Exports\ReporteExport;
+use Maatwebsite\Excel\Facades\Excel;
 
 class ReporteController extends Controller
 {
