@@ -5,12 +5,13 @@
 	<div class="row justify-content-center">
 		<div class="col-md-10">
 			<div class="card">
-				<div class="card-header">Reportes temporal</div>
+				<div class="card-header">Reportes</div>
 				
 				<div class="card-body">
 					<input type="text" id="myInputKyoId" onkeyup="myFunctionKyoSearchId()" placeholder="Buscar por Id de usuario">
 					<input type="text" id="myInputKyoNombre" onkeyup="myFunctionKyoSearchNombre()" placeholder="Buscar por nombre de usuario">
 					<input type="text" id="myInputKyoSesion" onkeyup="myFunctionKyoSearchSesion()" placeholder="Buscar por Id de sesion">
+					<a href="{{action('ReporteController@export')}}"><button> exportar </button></a>
 					<table class="table" id="myTableKyoId">
 						<thead>
 							<tr>

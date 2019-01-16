@@ -1,5 +1,7 @@
 <?php
 
+use App\Exports\ReporteExport;
+use Maatwebsite\Excel\Facades\Excel
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -7,6 +9,12 @@ use Illuminate\Support\Facades\DB;
 
 class ReporteController extends Controller
 {
+	
+	public function export() 
+    {
+        return Excel::download(new ReporteExport, 'reporte.xlsx');
+    }
+	
     /**
      * Display a listing of the resource.
      *
