@@ -13,20 +13,20 @@
 							<tr>
 								@foreach($datos as $key => $value) 
 									@foreach(get_object_vars($value) as $key2 => $value2)
-										<th scope="col">{{ $key2 }}</th>
+										<th>{{ $key2 }}</th>
 									@endforeach
 									@break
 								@endforeach
 							</tr>
 						</thead>
 						<tbody>
-						<!---
 							@foreach($datos as $key => $value)
 								<tr>
-									<th scope="row">{{ $value->id }}</th>
+									@foreach(get_object_vars($value) as $key2 => $value2)
+										<th>{{ $value }}</th>
+									@endforeach
 								</tr>
 							@endforeach
-						--->
 						</tbody>
 					</table>
 				</div>
