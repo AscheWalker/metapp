@@ -9,7 +9,7 @@
 				
 				<div class="card-body">
 					<input type="text" id="myInputKyoId" onkeyup="myFunctionKyoSearchId()" placeholder="Buscar por Id de usuario">
-					<table class="table">
+					<table class="table" id="myTableKyoId">
 						<thead>
 							<tr>
 								@foreach($datos as $key => $value) 
