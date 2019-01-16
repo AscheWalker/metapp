@@ -57,6 +57,7 @@ class ReporteController extends Controller
 					->leftJoin('sesiones', 'logs.Id-sesion', '=', 'sesiones.id')
 					->leftJoin('actividades', 'logs.Id-actividad', '=', 'actividades.id')
 					->leftJoin('logs__tipos', 'logs.Id-tipo', '=', 'logs__tipos.id')
+					->select('logs.id as ID', 'logs.Id-usuario as Usuario', 'logs.Id-sesion as Sesion', 'logs.Id-actividad as Actividad', 'logs.Valos as Valor')
 					->get();
 		
 		return view('reporteVer', compact('datos'));
