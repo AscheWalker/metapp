@@ -60,7 +60,7 @@ class ReporteController extends Controller
 					->select(
 							'logs.id as ID',
 							'logs.Id-usuario as "Id Usuario"',
-							'user.name as Usuario',
+							'users.name as Usuario',
 							'logs.Id-sesion as Sesion',
 							'logs.Id-actividad as Actividad',
 							'logs.Valor as Valor'
