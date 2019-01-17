@@ -9,6 +9,10 @@ upload the files to a server and run the command: php artisan serve
 
 Release notes:
 
+v2.2
+- genera una tabla con los datos de uso de la aplicacion
+- se puede descargar un excel con los datos de uso de la aplicacion
+
 v2.1
 - added table with users
 - steps now can be set with a specific order
