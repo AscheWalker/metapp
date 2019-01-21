@@ -55,7 +55,7 @@ class DispositivosController extends Controller
         //
 		$idUser = Auth::user()->id
 		$characters = Dispositivos::where('user', $idUser)->get();
-		return view('dispositivosVer', compact('characters'));
+		return view('dispositivosVer', compact('characters', 'idUser'));
     }
 
     /**
