@@ -73,7 +73,6 @@ class GruposUsuariosController extends Controller
 		session(['idSesion' => $idSesion]);
 		$usuarios = User::all();
 		$dispositivoAsignado = GruposDispositivos::where('grupo', $idGrupo)->orderBy('id', 'desc')->get();
-		$dispositivoAsignado = "none";
 		return view('miembrosVer', compact('characters', 'idGrupo', 'idSesion', 'usuarios', 'dispositivoAsignado'));
     }
 
