@@ -7,6 +7,7 @@ use App\Dispositivos;
 use Illuminate\Http\Request;
 use Auth;
 use App\User;
+use App\GruposUsuarios;
 
 class GruposDispositivosController extends Controller
 {
