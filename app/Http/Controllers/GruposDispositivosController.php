@@ -53,7 +53,6 @@ class GruposDispositivosController extends Controller
 		$grupoDispositivo->save();
 		
 		//datos para volver a la vista anterior
-		$miembros = GruposUsuarios::create($request->all());
 		$idGrupo = $request->{'id-grupo'};
 		$characters = GruposUsuarios::where('id-grupo', $idGrupo)->get();
 		$idSesion = session('idSesion');
