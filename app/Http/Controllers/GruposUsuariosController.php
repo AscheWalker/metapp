@@ -49,7 +49,7 @@ class GruposUsuariosController extends Controller
 		$characters = GruposUsuarios::where('id-grupo', $idGrupo)->get();
 		$idSesion = session('idSesion');
 		$usuarios = User::all();
-		$dispositivoAsignado = GruposDispositivos::where('grupo', $idGrupo)->orderBy('id', 'desc')->first();
+		$dispositivoAsignado = GruposDispositivos::where('grupo', $idGrupo)->orderBy('id', 'desc')->get();
 		return view('miembrosVer', compact('characters', 'idGrupo', 'idSesion', 'usuarios', 'dispositivoAsignado'));
     }
 
@@ -72,7 +72,7 @@ class GruposUsuariosController extends Controller
 		$characters = GruposUsuarios::where('id-grupo', $idGrupo)->get();
 		session(['idSesion' => $idSesion]);
 		$usuarios = User::all();
-		$dispositivoAsignado = GruposDispositivos::where('grupo', $idGrupo)->orderBy('id', 'desc')->first();
+		$dispositivoAsignado = GruposDispositivos::where('grupo', $idGrupo)->orderBy('id', 'desc')->get();
 		return view('miembrosVer', compact('characters', 'idGrupo', 'idSesion', 'usuarios', 'dispositivoAsignado'));
     }
 

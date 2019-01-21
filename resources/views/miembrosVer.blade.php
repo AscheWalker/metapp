@@ -31,6 +31,7 @@
 						Dispositivo actual asignado: 
 						@foreach($dispositivoAsignado as $key => $value)
 							{{ $value->nombre }}
+							@break
 						@endforeach
 					<table class="table">
 						<thead>
