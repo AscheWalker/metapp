@@ -28,11 +28,7 @@
 				</div>
 				
 				<div class="card-body">
-						Dispositivo actual asignado: 
-						@foreach($dispositivoAsignado as $key => $value)
-							{{ $value->nombre }}
-							@break
-						@endforeach
+						Dispositivo actual asignado: {{ $dispositivoAsignado }}
 					<table class="table">
 						<thead>
 							<tr>
