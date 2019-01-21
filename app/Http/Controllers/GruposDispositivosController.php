@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\GruposDispositivos;
+use App\Dispositivos;
 use Illuminate\Http\Request;
+use Auth;
+use App\User;
 
 class GruposDispositivosController extends Controller
 {
@@ -22,9 +25,13 @@ class GruposDispositivosController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
         //
+		$idGrupo = $request->grupoId;
+		$idUser = Auth::user()->id;
+		$characters = Dispositivos::where('user', $idUser)->get();
+		return view('dispositivosAsignar', compact('characters', 'idGrupo'));
     }
 
     /**
@@ -35,7 +42,24 @@ class GruposDispositivosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // guardado del dispositivo
+		$grupoDispositivo = new GruposDispositivos;
+		$grupoDispositivo->grupo = $request->{'id-grupo'};
+		$dispositivo = Dispositivos::where('id', $request->{'id-dispositivo'})->get();
+		foreach ($dispositivo as $key => $value){
+			$grupoDispositivo->nombre = $value->nombre;
+			$grupoDispositivo->dispositivo = $value->dispositivo;
+		}
+		$grupoDispositivo->save();
+		
+		//datos para volver a la vista anterior
+		$miembros = GruposUsuarios::create($request->all());
+		$idGrupo = $request->{'id-grupo'};
+		$characters = GruposUsuarios::where('id-grupo', $idGrupo)->get();
+		$idSesion = session('idSesion');
+		$usuarios = User::all();
+		$dispositivoAsignado = GruposDispositivos::where('grupo', $idGrupo)->orderBy('id', 'desc')->first();
+		return view('miembrosVer', compact('characters', 'idGrupo', 'idSesion', 'usuarios', 'dispositivoAsignado'));
     }
 
     /**

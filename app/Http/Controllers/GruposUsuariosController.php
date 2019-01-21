@@ -6,6 +6,7 @@ use App\GruposUsuarios;
 use Illuminate\Http\Request;
 
 use App\User;
+use App\GruposDispositivos;
 
 class GruposUsuariosController extends Controller
 {
@@ -48,7 +49,8 @@ class GruposUsuariosController extends Controller
 		$characters = GruposUsuarios::where('id-grupo', $idGrupo)->get();
 		$idSesion = session('idSesion');
 		$usuarios = User::all();
-		return view('miembrosVer', compact('characters', 'idGrupo', 'idSesion', 'usuarios'));
+		$dispositivoAsignado = GruposDispositivos::where('grupo', $idGrupo)->orderBy('id', 'desc')->first();
+		return view('miembrosVer', compact('characters', 'idGrupo', 'idSesion', 'usuarios', 'dispositivoAsignado'));
     }
 
     /**
@@ -70,7 +72,8 @@ class GruposUsuariosController extends Controller
 		$characters = GruposUsuarios::where('id-grupo', $idGrupo)->get();
 		session(['idSesion' => $idSesion]);
 		$usuarios = User::all();
-		return view('miembrosVer', compact('characters', 'idGrupo', 'idSesion', 'usuarios'));
+		$dispositivoAsignado = GruposDispositivos::where('grupo', $idGrupo)->orderBy('id', 'desc')->first();
+		return view('miembrosVer', compact('characters', 'idGrupo', 'idSesion', 'usuarios', 'dispositivoAsignado'));
     }
 
     /**
