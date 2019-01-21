@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Dispositivos;
 use Illuminate\Http\Request;
+use Auth;
 
 class DispositivosController extends Controller
 {
@@ -47,6 +48,14 @@ class DispositivosController extends Controller
     public function show(Dispositivos $dispositivos)
     {
         //
+    }
+	
+	public function show2(Dispositivos $dispositivos, Request $request)
+    {
+        //
+		$idUser = Auth::user()->id
+		$characters = Dispositivos::where('user', $idUser)->get();
+		return view('dispositivosVer', compact('characters'));
     }
 
     /**
