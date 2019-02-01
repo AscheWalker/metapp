@@ -1,0 +1,244 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "metapp",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "Test",
+                    "slots": [],
+                    "samples": [
+                        "start the test"
+                    ]
+                },
+                {
+                    "name": "StartActivity",
+                    "slots": [],
+                    "samples": [
+                        "start activity"
+                    ]
+                },
+                {
+                    "name": "ViewSteps",
+                    "slots": [],
+                    "samples": [
+                        "View the steps",
+                        "Show me the steps"
+                    ]
+                },
+                {
+                    "name": "CheckSteps",
+                    "slots": [
+                        {
+                            "name": "number",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "Show me the step number {number}"
+                    ]
+                },
+                {
+                    "name": "ViewSubSteps",
+                    "slots": [],
+                    "samples": [
+                        "View the substeps",
+                        "Show me the substeps"
+                    ]
+                },
+                {
+                    "name": "CheckSubSteps",
+                    "slots": [
+                        {
+                            "name": "number",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "Show me the substep number {number}"
+                    ]
+                },
+                {
+                    "name": "AnswerSubSteps",
+                    "slots": [
+                        {
+                            "name": "integer",
+                            "type": "AMAZON.NUMBER"
+                        },
+                        {
+                            "name": "decimal",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "The answer is the number {integer} point {decimal}"
+                    ]
+                },
+                {
+                    "name": "AnswerDefault",
+                    "slots": [],
+                    "samples": [
+                        "The answer is "
+                    ]
+                },
+                {
+                    "name": "StartOrder",
+                    "slots": [],
+                    "samples": [
+                        "Start the order",
+                        "Start the order of the steps"
+                    ]
+                },
+                {
+                    "name": "CheckOrder",
+                    "slots": [
+                        {
+                            "name": "lugar",
+                            "type": "AMAZON.Ordinal"
+                        },
+                        {
+                            "name": "paso",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "The {lugar} step is the step number {paso}"
+                    ]
+                },
+                {
+                    "name": "StartAnalisis",
+                    "slots": [],
+                    "samples": [
+                        "Start the analisis of the activity"
+                    ]
+                },
+                {
+                    "name": "NameDevice",
+                    "slots": [
+                        {
+                            "name": "nombre",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ],
+                    "samples": [
+                        "The name of this device is {nombre}"
+                    ]
+                },
+                {
+                    "name": "GetDeviceName",
+                    "slots": [],
+                    "samples": [
+                        "What is the name of this device",
+                        "Give me the name of this device"
+                    ]
+                },
+                {
+                    "name": "RegisterDevice",
+                    "slots": [
+                        {
+                            "name": "number",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "Register this device for the user number {number}",
+                        "Register this device to the user number {number}",
+                        "Register this device under the user number {number}"
+                    ]
+                },
+                {
+                    "name": "CheckOption",
+                    "slots": [
+                        {
+                            "name": "number",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "Ver opcion {number}",
+                        "Revisar opcion {number}"
+                    ]
+                },
+                {
+                    "name": "FinalAnswer",
+                    "slots": [
+                        {
+                            "name": "answer",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "La respuesta de la actividad es {answer}",
+                        "La respuesta final es {answer}"
+                    ]
+                },
+                {
+                    "name": "AnswerSubStepsWord",
+                    "slots": [
+                        {
+                            "name": "answerword",
+                            "type": "yes_no_ok"
+                        }
+                    ],
+                    "samples": [
+                        "The answer is the word {answerword}"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "yes_no_ok",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "Ok",
+                                "synonyms": [
+                                    "Okey",
+                                    "OKEY",
+                                    "OK",
+                                    "ok",
+                                    "okey"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "No",
+                                "synonyms": [
+                                    "no"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Yes",
+                                "synonyms": [
+                                    "yes"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
