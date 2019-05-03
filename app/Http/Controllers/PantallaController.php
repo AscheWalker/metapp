@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Pantalla;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class PantallaController extends Controller
 {
@@ -47,6 +48,27 @@ class PantallaController extends Controller
     public function show(Pantalla $pantalla)
     {
         //
+		return view('Pantallas');
+    }
+	
+	
+	public function show2($pantalla)
+    {
+        //
+		
+		$datos = DB::table('pantallas')
+					->leftJoin('sub_pasos', 'pantallas.content', '=', 'sub_pasos.id')
+					->select(
+							'pantallas.id as ID',
+							'pantallas.grupos as GRUPOS',
+							'sub_pasos.name as NOMBRE',
+							'sub_pasos.desc as DESCRIPCION'
+							)
+					->where('grupos', $pantalla)
+					->get();
+		
+		$characters = Pantalla::where('grupos', $pantalla)->get();
+		return view('pantallasVer', compact('datos'));
     }
 
     /**

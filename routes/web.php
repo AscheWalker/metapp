@@ -46,6 +46,9 @@ Route::get('/planeamiento/{id}', 'Planeamiento@show')->name('Planeamiento');
 Route::get('/planeamientocheck', 'Planeamiento@check')->name('CheckPlaneamiento');
 Route::get('/ejecucioncheck', 'Planeamiento@checkejecucion')->name('CheckEjecucion');
 
+Route::get('/pantallas', 'PantallaController@show')->name('Pantalla');
+Route::get('/pantallas/{id}', 'PantallaController@show2')->name('VerPantalla');
+
 Route::put('/grupos/ver', 'GruposController@show2')->name('VerGrupos');
 Route::put('/grupos/crear', 'GruposController@create')->name('CrearGrupos');
 Route::put('/grupos/nuevo', 'GruposController@store')->name('NuevoGrupos');
